@@ -252,4 +252,4 @@ Deploy your project on Vercel, Netlify, Cloudflare Pages, or anywhere else befor
 Fill in both links before submitting:
 
 - Live Link:
-- GitHub Repository Link:
+- GitHub Repository Link: https://github.com/smatikuzzamanatik/Assignment-06.git
