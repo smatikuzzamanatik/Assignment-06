@@ -1,7 +1,7 @@
 import { isWorkout, type Workout } from "./workout";
 import { FALLBACK_WORKOUTS } from "./workout-fallback";
 
-const API_URL = "https://api.abcz.workers.dev/api/fitlog";
+const API_URL = "https://api.api-store.workers.dev/api/fitlog";
 const REQUEST_TIMEOUT_MS = 6_000;
 
 async function requestWorkouts(path = ""): Promise<Response | null> {
