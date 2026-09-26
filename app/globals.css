@@ -5,128 +5,481 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-    --font-heading: var(--font-sans);
-    --font-sans: var(--font-sans);
-    --color-sidebar-ring: var(--sidebar-ring);
-    --color-sidebar-border: var(--sidebar-border);
-    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-    --color-sidebar-accent: var(--sidebar-accent);
-    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-    --color-sidebar-primary: var(--sidebar-primary);
-    --color-sidebar-foreground: var(--sidebar-foreground);
-    --color-sidebar: var(--sidebar);
-    --color-chart-5: var(--chart-5);
-    --color-chart-4: var(--chart-4);
-    --color-chart-3: var(--chart-3);
-    --color-chart-2: var(--chart-2);
-    --color-chart-1: var(--chart-1);
-    --color-ring: var(--ring);
-    --color-input: var(--input);
-    --color-border: var(--border);
-    --color-destructive: var(--destructive);
-    --color-accent-foreground: var(--accent-foreground);
-    --color-accent: var(--accent);
-    --color-muted-foreground: var(--muted-foreground);
-    --color-muted: var(--muted);
-    --color-secondary-foreground: var(--secondary-foreground);
-    --color-secondary: var(--secondary);
-    --color-primary-foreground: var(--primary-foreground);
-    --color-primary: var(--primary);
-    --color-popover-foreground: var(--popover-foreground);
-    --color-popover: var(--popover);
-    --color-card-foreground: var(--card-foreground);
-    --color-card: var(--card);
-    --color-foreground: var(--foreground);
-    --color-background: var(--background);
-    --radius-sm: calc(var(--radius) * 0.6);
-    --radius-md: calc(var(--radius) * 0.8);
-    --radius-lg: var(--radius);
-    --radius-xl: calc(var(--radius) * 1.4);
-    --radius-2xl: calc(var(--radius) * 1.8);
-    --radius-3xl: calc(var(--radius) * 2.2);
-    --radius-4xl: calc(var(--radius) * 2.6);
+  --font-heading: var(--font-oswald), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
 }
 
 :root {
-    --background: oklch(1 0 0);
-    --foreground: oklch(0.145 0 0);
-    --card: oklch(1 0 0);
-    --card-foreground: oklch(0.145 0 0);
-    --popover: oklch(1 0 0);
-    --popover-foreground: oklch(0.145 0 0);
-    --primary: oklch(0.205 0 0);
-    --primary-foreground: oklch(0.985 0 0);
-    --secondary: oklch(0.97 0 0);
-    --secondary-foreground: oklch(0.205 0 0);
-    --muted: oklch(0.97 0 0);
-    --muted-foreground: oklch(0.556 0 0);
-    --accent: oklch(0.97 0 0);
-    --accent-foreground: oklch(0.205 0 0);
-    --destructive: oklch(0.577 0.245 27.325);
-    --border: oklch(0.922 0 0);
-    --input: oklch(0.922 0 0);
-    --ring: oklch(0.708 0 0);
-    --chart-1: oklch(0.87 0 0);
-    --chart-2: oklch(0.556 0 0);
-    --chart-3: oklch(0.439 0 0);
-    --chart-4: oklch(0.371 0 0);
-    --chart-5: oklch(0.269 0 0);
-    --radius: 0.625rem;
-    --sidebar: oklch(0.985 0 0);
-    --sidebar-foreground: oklch(0.145 0 0);
-    --sidebar-primary: oklch(0.205 0 0);
-    --sidebar-primary-foreground: oklch(0.985 0 0);
-    --sidebar-accent: oklch(0.97 0 0);
-    --sidebar-accent-foreground: oklch(0.205 0 0);
-    --sidebar-border: oklch(0.922 0 0);
-    --sidebar-ring: oklch(0.708 0 0);
+  --background: #090a0c;
+  --foreground: #f4f4f6;
+  --card: #111317;
+  --card-foreground: #f4f4f6;
+  --popover: #15181e;
+  --popover-foreground: #f4f4f6;
+  --primary: #c6ff00;
+  --primary-foreground: #090a0c;
+  --secondary: #171a20;
+  --secondary-foreground: #f4f4f6;
+  --muted: #1a1e26;
+  --muted-foreground: #8c93a0;
+  --accent: #171a20;
+  --accent-foreground: #c6ff00;
+  --destructive: #ef4444;
+  --border: #22262f;
+  --input: #22262f;
+  --ring: #c6ff00;
+  --radius: 0.75rem;
+
+  /* Custom FitLog Design Tokens */
+  --fitlog-dark-base: #090a0c;
+  --fitlog-dark-surface: #111317;
+  --fitlog-dark-elevated: #161920;
+  --fitlog-dark-border: #22262f;
+  --fitlog-lime: #c6ff00;
+  --fitlog-lime-dim: rgba(198, 255, 0, 0.15);
+  --fitlog-text-high: #f4f4f6;
+  --fitlog-text-medium: #8c93a0;
+  --fitlog-text-low: #545b68;
 }
 
 .dark {
-    --background: oklch(0.145 0 0);
-    --foreground: oklch(0.985 0 0);
-    --card: oklch(0.205 0 0);
-    --card-foreground: oklch(0.985 0 0);
-    --popover: oklch(0.205 0 0);
-    --popover-foreground: oklch(0.985 0 0);
-    --primary: oklch(0.922 0 0);
-    --primary-foreground: oklch(0.205 0 0);
-    --secondary: oklch(0.269 0 0);
-    --secondary-foreground: oklch(0.985 0 0);
-    --muted: oklch(0.269 0 0);
-    --muted-foreground: oklch(0.708 0 0);
-    --accent: oklch(0.269 0 0);
-    --accent-foreground: oklch(0.985 0 0);
-    --destructive: oklch(0.704 0.191 22.216);
-    --border: oklch(1 0 0 / 10%);
-    --input: oklch(1 0 0 / 15%);
-    --ring: oklch(0.556 0 0);
-    --chart-1: oklch(0.87 0 0);
-    --chart-2: oklch(0.556 0 0);
-    --chart-3: oklch(0.439 0 0);
-    --chart-4: oklch(0.371 0 0);
-    --chart-5: oklch(0.269 0 0);
-    --sidebar: oklch(0.205 0 0);
-    --sidebar-foreground: oklch(0.985 0 0);
-    --sidebar-primary: oklch(0.488 0.243 264.376);
-    --sidebar-primary-foreground: oklch(0.985 0 0);
-    --sidebar-accent: oklch(0.269 0 0);
-    --sidebar-accent-foreground: oklch(0.985 0 0);
-    --sidebar-border: oklch(1 0 0 / 10%);
-    --sidebar-ring: oklch(0.556 0 0);
+  --background: #090a0c;
+  --foreground: #f4f4f6;
+  --card: #111317;
+  --card-foreground: #f4f4f6;
+  --popover: #15181e;
+  --popover-foreground: #f4f4f6;
+  --primary: #c6ff00;
+  --primary-foreground: #090a0c;
+  --secondary: #171a20;
+  --secondary-foreground: #f4f4f6;
+  --muted: #1a1e26;
+  --muted-foreground: #8c93a0;
+  --accent: #171a20;
+  --accent-foreground: #c6ff00;
+  --destructive: #ef4444;
+  --border: #22262f;
+  --input: #22262f;
+  --ring: #c6ff00;
+  --radius: 0.75rem;
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
-    }
+    box-sizing: border-box;
+  }
+  html {
+    @apply bg-background text-foreground font-sans scroll-smooth;
+    color-scheme: dark;
+  }
   body {
-    @apply bg-background text-foreground;
-    }
+    @apply min-h-screen bg-background text-foreground antialiased flex flex-col;
+  }
   button:not(:disabled), [role="button"]:not(:disabled) {
     cursor: pointer;
-    }
-  html {
-    @apply font-sans;
-    }
+  }
+}
+
+/* Typography Utility */
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+/* Layout Containers */
+.page-shell {
+  @apply min-h-screen flex flex-col bg-background text-foreground;
+}
+
+.site-main {
+  @apply flex-1 w-full;
+}
+
+.site-container {
+  @apply w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Site Header & Navbar */
+.site-header {
+  @apply w-full border-b border-border/80 bg-background/90 backdrop-blur-md sticky top-0 z-40;
+}
+
+.navbar-inner {
+  @apply h-16 flex items-center justify-between gap-4;
+}
+
+.brand-link {
+  @apply flex items-center gap-2.5 text-foreground hover:opacity-90 transition-opacity;
+}
+
+.brand-title {
+  @apply font-heading text-xl font-bold tracking-wider uppercase text-foreground;
+}
+
+.brand-icon {
+  @apply text-primary size-5 shrink-0;
+}
+
+.nav-links-cluster {
+  @apply flex items-center gap-1.5;
+}
+
+.nav-link {
+  @apply px-4 py-1.5 rounded-full text-sm font-medium transition-all text-muted-foreground hover:text-foreground;
+}
+
+.nav-link[data-active="true"] {
+  @apply bg-secondary text-primary font-semibold border border-border;
+}
+
+.header-badges-cluster {
+  @apply flex items-center gap-2.5;
+}
+
+.navbar-counter-badge {
+  @apply inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium transition-all;
+}
+
+.navbar-counter-badge-plan {
+  @apply bg-transparent text-foreground hover:opacity-90;
+}
+
+.badge-count-pill-plan {
+  @apply inline-flex items-center justify-center bg-primary text-primary-foreground font-bold text-xs rounded-full min-w-5 h-5 px-1.5;
+}
+
+.navbar-counter-badge-saved {
+  @apply bg-transparent text-muted-foreground hover:text-foreground;
+}
+
+.badge-count-pill-saved {
+  @apply inline-flex items-center justify-center border border-border bg-secondary text-muted-foreground font-medium text-xs rounded-full min-w-5 h-5 px-1.5;
+}
+
+/* Hero Section */
+.hero-card {
+  @apply bg-card border border-border rounded-2xl p-6 sm:p-10 lg:p-12 mb-12 lg:mb-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center overflow-hidden;
+}
+
+.hero-content {
+  @apply lg:col-span-7 flex flex-col items-start gap-4 sm:gap-5;
+}
+
+.hero-eyebrow {
+  @apply text-xs font-bold tracking-widest uppercase text-primary;
+}
+
+.hero-title {
+  @apply font-heading text-4xl sm:text-5xl lg:text-6xl font-black uppercase text-foreground leading-[0.95] tracking-tight;
+}
+
+.hero-description {
+  @apply text-sm sm:text-base text-muted-foreground leading-relaxed max-w-xl;
+}
+
+.hero-cta-btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full font-heading font-bold text-sm tracking-wider uppercase px-6 py-3 bg-primary text-primary-foreground hover:opacity-90 transition-all;
+}
+
+.hero-visual {
+  @apply lg:col-span-5 flex items-center justify-center w-full relative min-h-[260px] sm:min-h-[320px];
+}
+
+.hero-image {
+  @apply object-contain max-h-[320px] w-auto drop-shadow-2xl select-none;
+}
+
+/* Library Section */
+.library-section {
+  @apply mb-20 scroll-mt-24;
+}
+
+.library-header {
+  @apply mb-8;
+}
+
+.library-title {
+  @apply font-heading text-2xl sm:text-3xl font-bold uppercase tracking-wider text-foreground mb-1;
+}
+
+.library-subtitle {
+  @apply text-sm text-muted-foreground;
+}
+
+.workout-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 list-none p-0 m-0;
+}
+
+.workout-card {
+  @apply bg-card border border-border rounded-xl overflow-hidden flex flex-col transition-all duration-200 hover:border-border/80;
+}
+
+.workout-card:hover {
+  transform: translateY(-2px);
+}
+
+.workout-card-image-wrap {
+  @apply relative w-full aspect-[16/10] overflow-hidden bg-secondary;
+}
+
+.workout-card-image {
+  @apply object-cover w-full h-full transition-transform duration-300;
+}
+
+.workout-card:hover .workout-card-image {
+  transform: scale(1.04);
+}
+
+.workout-card-body {
+  @apply p-5 flex flex-col flex-1;
+}
+
+.workout-tags-row {
+  @apply flex flex-wrap gap-1.5 mb-3;
+}
+
+.workout-tag-badge {
+  @apply bg-primary text-primary-foreground font-bold text-[10px] tracking-wider uppercase rounded-full px-2.5 py-0.5 border-none;
+}
+
+.workout-card-name {
+  @apply font-heading text-lg font-bold uppercase tracking-wide text-foreground line-clamp-1 mb-1;
+}
+
+.workout-card-equipment {
+  @apply text-xs text-muted-foreground mb-4 line-clamp-1;
+}
+
+.workout-card-stats {
+  @apply mt-auto pt-3 border-t border-border flex items-center justify-between text-xs text-muted-foreground;
+}
+
+.workout-stat-item {
+  @apply flex items-center gap-1.5;
+}
+
+.workout-stat-icon {
+  @apply size-3.5 text-muted-foreground;
+}
+
+.workout-stat-icon-accent {
+  @apply size-3.5 text-primary;
+}
+
+/* Details Page */
+.detail-layout {
+  @apply py-8 sm:py-12 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start;
+}
+
+.detail-media-col {
+  @apply lg:col-span-6 sticky top-24;
+}
+
+.detail-image-box {
+  @apply relative w-full aspect-square sm:aspect-[4/4.5] rounded-2xl overflow-hidden border border-border bg-card shadow-2xl;
+}
+
+.detail-image {
+  @apply object-cover w-full h-full;
+}
+
+.detail-info-col {
+  @apply lg:col-span-6 flex flex-col gap-6;
+}
+
+.detail-name {
+  @apply font-heading text-3xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight text-foreground;
+}
+
+.detail-desc {
+  @apply text-sm sm:text-base text-muted-foreground leading-relaxed;
+}
+
+.detail-specs-card {
+  @apply bg-card border border-border rounded-xl overflow-hidden;
+}
+
+.detail-spec-row {
+  @apply border-b border-border/80 last:border-none flex items-center justify-between px-5 py-3.5 text-sm;
+}
+
+.detail-spec-label {
+  @apply font-heading uppercase text-xs tracking-wider text-muted-foreground font-semibold;
+}
+
+.detail-spec-val {
+  @apply text-foreground font-medium text-sm text-right;
+}
+
+.detail-instructions-section {
+  @apply flex flex-col gap-3;
+}
+
+.detail-instructions-title {
+  @apply font-heading text-xl font-bold uppercase tracking-wider text-foreground;
+}
+
+.detail-instruction-list {
+  @apply list-decimal pl-5 space-y-2 text-sm text-muted-foreground leading-relaxed;
+}
+
+.detail-actions-row {
+  @apply flex flex-wrap sm:flex-nowrap items-center gap-4 pt-2;
+}
+
+.btn-pill-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-full font-bold text-xs sm:text-sm uppercase tracking-wider px-6 py-3 bg-primary text-primary-foreground hover:opacity-90 transition-all disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-pill-secondary {
+  @apply inline-flex items-center justify-center gap-2 rounded-full font-medium text-xs sm:text-sm px-6 py-3 bg-secondary text-foreground border border-border hover:bg-muted transition-all disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+/* My Plan Page */
+.plan-page-header {
+  @apply mb-8;
+}
+
+.plan-page-title {
+  @apply font-heading text-3xl sm:text-4xl font-black uppercase tracking-wide text-foreground mb-1;
+}
+
+.plan-page-subtitle {
+  @apply text-sm text-muted-foreground;
+}
+
+.plan-summary-card {
+  @apply bg-card border border-border rounded-xl p-6 sm:p-8 mb-8 grid grid-cols-3 gap-4 divide-x divide-border;
+}
+
+.plan-summary-metric {
+  @apply flex flex-col gap-1 first:pl-0 px-4 sm:px-8;
+}
+
+.plan-metric-title {
+  @apply text-xs sm:text-sm text-muted-foreground font-medium;
+}
+
+.plan-metric-number {
+  @apply font-heading text-3xl sm:text-5xl font-black text-foreground;
+}
+
+.plan-metric-number-accent {
+  @apply text-primary;
+}
+
+.plan-toolbar {
+  @apply flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 mb-6;
+}
+
+.plan-tabs-list {
+  @apply inline-flex items-center p-1 bg-secondary rounded-full border border-border;
+}
+
+.plan-tab-trigger {
+  @apply px-5 py-1.5 rounded-full text-xs sm:text-sm font-medium transition-all text-muted-foreground hover:text-foreground;
+}
+
+.plan-tab-trigger[data-state="active"] {
+  @apply bg-card text-foreground font-semibold shadow-sm;
+}
+
+.plan-sort-wrapper {
+  @apply flex items-center justify-end gap-2 text-xs sm:text-sm text-muted-foreground;
+}
+
+.plan-list-wrap {
+  @apply space-y-4 list-none p-0 m-0;
+}
+
+.plan-row-card {
+  @apply bg-card border border-border rounded-xl p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 transition-all;
+}
+
+.plan-row-left {
+  @apply flex items-center gap-4 w-full sm:w-auto;
+}
+
+.plan-row-thumb {
+  @apply relative size-16 sm:w-28 sm:h-18 rounded-lg overflow-hidden shrink-0 bg-secondary border border-border;
+}
+
+.plan-row-details {
+  @apply flex flex-col gap-1;
+}
+
+.plan-row-title {
+  @apply font-heading text-base sm:text-lg font-bold uppercase tracking-wide text-foreground hover:text-primary transition-colors;
+}
+
+.plan-row-equipment {
+  @apply text-xs text-muted-foreground;
+}
+
+.plan-row-actions {
+  @apply flex items-center gap-2 self-end sm:self-center shrink-0 w-full sm:w-auto justify-end;
+}
+
+.plan-row-done-btn {
+  @apply inline-flex items-center justify-center gap-1.5 rounded-full font-bold text-xs uppercase px-4 py-2 bg-primary text-primary-foreground hover:opacity-90 transition-all disabled:opacity-60 disabled:cursor-not-allowed;
+}
+
+.plan-row-details-btn {
+  @apply inline-flex items-center justify-center rounded-full text-xs font-medium px-4 py-2 border border-border bg-secondary text-foreground hover:bg-muted transition-all;
+}
+
+.plan-row-remove-btn {
+  @apply size-8 rounded-full inline-flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-muted transition-colors;
+}
+
+/* Empty State */
+.plan-empty-card {
+  @apply w-full border border-dashed border-border/80 rounded-2xl py-16 px-6 flex flex-col items-center justify-center text-center gap-3 bg-card/40 my-6;
+}
+
+.plan-empty-heading {
+  @apply font-heading text-xl sm:text-2xl font-bold uppercase tracking-wider text-foreground;
+}
+
+.plan-empty-subtext {
+  @apply text-sm text-muted-foreground max-w-sm;
+}
+
+.plan-empty-action {
+  @apply mt-4 inline-flex items-center justify-center rounded-full font-bold text-xs uppercase tracking-wider px-6 py-2.5 bg-primary text-primary-foreground hover:opacity-90 transition-all;
+}
+
+/* Footer */
+.site-footer {
+  @apply border-t border-border/80 bg-background/90 py-8 mt-auto;
+}
+
+.footer-inner {
+  @apply flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground;
 }
